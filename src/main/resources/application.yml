@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8085}
+
+logging.pattern.console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=gateway:
+
+spring:
+  application:
+    name: word-counter-gateway
